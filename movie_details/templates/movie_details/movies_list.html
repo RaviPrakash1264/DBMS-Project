@@ -1,0 +1,10 @@
+{% extends "general_information/base.html" %}
+{% block navbar %}
+<h1>Welcome to Movie List</h1>
+<ol>
+  {% for movie in movies %}
+  <h2><li><a href="{{movie.movie_id}}">{{movie.movie_name}}</a></li></h2>
+  <img src="http://image.tmdb.org/t/p/w500/{{movie.image}}" alt="">
+  {% endfor %}
+</ol>
+{% endblock %}
